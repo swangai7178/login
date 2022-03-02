@@ -1,15 +1,13 @@
 // ignore_for_file: avoid_print, unnecessary_new, prefer_const_constructors
 
 import 'package:flutter/material.dart';
- import 'si.dart';
+import 'si.dart';
+
 void main() => runApp(MyApp());
 
- 
 class MyApp extends StatelessWidget {
-  
- 
   static const String _title = 'login';
- 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +31,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-   
     return Padding(
         padding: const EdgeInsets.all(10),
         child: ListView(
@@ -80,7 +77,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               onPressed: () {
                 //forgot password screen
               },
-              child: const Text('Forgot Password',),
+              child: const Text(
+                'Forgot Password',
+              ),
             ),
             Container(
                 height: 50,
@@ -91,8 +90,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     print(nameController.text);
                     print(passwordController.text);
                   },
-                )
-            ),
+                )),
             Row(
               children: <Widget>[
                 const Text('Does not have account?'),
@@ -102,7 +100,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()),);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SecondRoute()),
+                    );
                   },
                 )
               ],
@@ -151,12 +153,11 @@ class SecondRoute extends StatelessWidget {
                             ),
                             keyboardType: TextInputType.emailAddress,
                           ),
-                           TextFormField(
-                            decoration: InputDecoration(
-                              labelText: "enter username",
-                            ),
-                            keyboardType: TextInputType.text
-                          ),
+                          TextFormField(
+                              decoration: InputDecoration(
+                                labelText: "enter username",
+                              ),
+                              keyboardType: TextInputType.text),
                           TextFormField(
                             decoration: InputDecoration(
                               labelText: "enter password",
@@ -175,9 +176,7 @@ class SecondRoute extends StatelessWidget {
                             child: new Text("register"),
                           ),
                         ],
-                        
                       )),
-                      
                 ),
               )
             ],
